@@ -49,12 +49,14 @@ h2 {
   animation: scaleBar 0.5s; }
 
 .myDatas {
-  margin-left: 60px;
-  -webkit-animation: move 0.5s;
-  -moz-animation: move 0.5s;
-  -ms-animation: move 0.5s;
-  -o-animation: move 0.5s;
-  animation: move 0.5s; }
+  margin-left: 60px; }
+  @media only screen and (min-width: 421px) {
+    .myDatas {
+      -webkit-animation: move 0.5s;
+      -moz-animation: move 0.5s;
+      -ms-animation: move 0.5s;
+      -o-animation: move 0.5s;
+      animation: move 0.5s; } }
   @media only screen and (max-width: 420px) {
     .myDatas {
       margin-left: 0px; } }

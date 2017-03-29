@@ -4,6 +4,12 @@
   }
 }
 
+@mixin bp-large {
+  @media only screen and (min-width:421px){
+    @content;
+  }
+}
+
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
         @content;
@@ -99,11 +105,11 @@ h2{
 
 }
 
-
-
 .myDatas{
   margin-left: 60px;
-  @include animation('move 0.5s');
+  @include bp-large{
+     @include animation('move 0.5s');
+  }
   @include bp-small{
     margin-left: 0px;
   }
