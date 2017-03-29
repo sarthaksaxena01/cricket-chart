@@ -1,0 +1,21 @@
+{
+  "name": "cricket-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build-css": "node-sass --include-path scss scss/main.scss   public/css/cricket.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "method-override": "^2.3.8",
+    "morgan": "^1.8.1",
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0"
+  }
+}

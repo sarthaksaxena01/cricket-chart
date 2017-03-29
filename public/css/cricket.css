@@ -1,0 +1,153 @@
+h2 {
+  text-align: center;
+  margin-bottom: 2%; }
+  @media only screen and (max-width: 420px) {
+    h2 {
+      font-size: 24px;
+      margin-bottom: 6%; } }
+
+.row .form-container .panels {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 2%; }
+  .row .form-container .panels .panel .ng-cloak {
+    display: none !important; }
+  .row .form-container .panels .panel .remQuestion {
+    background: #fff2a8 !important;
+    color: black !important; }
+  .row .form-container .panels .panel .wrongAnswers {
+    background: rgba(255, 0, 0, 0.69) !important; }
+  .row .form-container .panels .panel .panel-body {
+    background-color: rgba(0, 246, 255, 0.13); }
+    .row .form-container .panels .panel .panel-body select {
+      padding: 7px;
+      width: 50%;
+      border-radius: 2px; }
+      @media only screen and (max-width: 420px) {
+        .row .form-container .panels .panel .panel-body select {
+          width: 100%;
+          font-size: 0.9em; } }
+  .row .form-container .panels #submits {
+    margin-left: 34%;
+    margin-right: 2px; }
+    @media only screen and (max-width: 420px) {
+      .row .form-container .panels #submits {
+        margin-left: 16%; } }
+  .row .form-container .panels .primary {
+    width: 15%;
+    margin-bottom: 2%; }
+    @media only screen and (max-width: 420px) {
+      .row .form-container .panels .primary {
+        width: 32%; } }
+
+.row .bars {
+  margin-top: 5%;
+  -webkit-animation: scaleBar 0.5s;
+  -moz-animation: scaleBar 0.5s;
+  -ms-animation: scaleBar 0.5s;
+  -o-animation: scaleBar 0.5s;
+  animation: scaleBar 0.5s; }
+
+.myDatas {
+  margin-left: 60px;
+  -webkit-animation: move 0.5s;
+  -moz-animation: move 0.5s;
+  -ms-animation: move 0.5s;
+  -o-animation: move 0.5s;
+  animation: move 0.5s; }
+  @media only screen and (max-width: 420px) {
+    .myDatas {
+      margin-left: 0px; } }
+
+.panels-chart {
+  width: 80%; }
+
+@-webkit-keyframes scaleBar {
+  0% {
+    transform: scale(0, 0); }
+  100% {
+    transform: scale(1, 1); } }
+
+@-moz-keyframes scaleBar {
+  0% {
+    transform: scale(0, 0); }
+  100% {
+    transform: scale(1, 1); } }
+
+@-ms-keyframes scaleBar {
+  0% {
+    transform: scale(0, 0); }
+  100% {
+    transform: scale(1, 1); } }
+
+@-o-keyframes scaleBar {
+  0% {
+    transform: scale(0, 0); }
+  100% {
+    transform: scale(1, 1); } }
+
+@keyframes scaleBar {
+  0% {
+    transform: scale(0, 0); }
+  100% {
+    transform: scale(1, 1); } }
+
+@-webkit-keyframes move {
+  0% {
+    width: 80%; }
+  100% {
+    width: 50%; } }
+
+@-moz-keyframes move {
+  0% {
+    width: 80%; }
+  100% {
+    width: 50%; } }
+
+@-ms-keyframes move {
+  0% {
+    width: 80%; }
+  100% {
+    width: 50%; } }
+
+@-o-keyframes move {
+  0% {
+    width: 80%; }
+  100% {
+    width: 50%; } }
+
+@keyframes move {
+  0% {
+    width: 80%; }
+  100% {
+    width: 50%; } }
+
+.chart {
+  background: #eee;
+  padding: 3px; }
+  .chart div {
+    width: 0;
+    transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    font: 10px sans-serif;
+    background-color: steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 15px;
+    color: white;
+    box-shadow: 2px 2px 2px #666; }
+
+.bar {
+  fill: steelblue; }
+  .bar:hover {
+    fill: brown; }
+
+.axis {
+  font: 10px sans-serif; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges; }
