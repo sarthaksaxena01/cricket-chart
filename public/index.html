@@ -15,10 +15,10 @@
     <div class="container-fluid">
         <h2> Cricket Trivia </h2>
         <div class="row">
-            <div class="form-container" ng-class="{'col-md-6 col-sm-12 myDatas':myData}">
+            <div class="form-container col-sm-12" ng-class="{'col-md-6 col-sm-12 myDatas':myData && clearData==0, 'myDatasClear':clearData==1}">
                 <form class="panels" name="cricketForm" ng-submit="checkAll()" ng-class="{'panels-chart':myData}">
                     <div class="panel panel-primary" ng-repeat="quesAns in data">
-                        <div class="panel-heading ng-cloak"  ng-class="{'remQuestion':$index==remainingQuestion,'wrongAnswers':$index!=remainingQuestion && incorrectAnswers.indexOf($index)>-1}">{{quesAns.questionId}}. {{quesAns.question}}</div>
+                        <div class="panel-heading ng-cloak"  ng-class="{'remQuestion':$index==remainingQuestion && clearData==0,'wrongAnswers':$index!=remainingQuestion && incorrectAnswers.indexOf($index)>-1 && clearData==0}">{{quesAns.questionId}}. {{quesAns.question}}</div>
                         <div class="panel-body">
                             <select name="selects" ng-model="quesAns.answerSelected" ng-options="opt for opt in quesAns.options" >
                                 <option disabled hidden selected value="">Please select an option</option>
@@ -29,7 +29,7 @@
                     <input type="button" class="btn btn-primary primary" name="Clear" value="Clear" ng-click=clears()>
                 </form>
             </div>
-            <div class="col-md-5 bars" ng-if="myData" ng-class="{'col-sm-12':myData}">
+            <div class="col-md-5 bars" ng-if="myData && clearData==0" ng-class="{'col-sm-12':myData}">
                 <bars-chart chart-data="myData"></bars-chart>
             </div>
         </div>

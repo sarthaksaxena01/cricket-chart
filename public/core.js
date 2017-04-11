@@ -2,6 +2,7 @@ var app=angular.module('cricketApp',[]);
 app.controller('mainController',function($scope,$http) {
     $scope.data=[];
     $scope.incorrectAnswers=[];
+    $scope.clearData=0;
     $scope.remainingQuestion=null;
     var dataSent={};
     $http.get('Data.js')
@@ -14,6 +15,7 @@ app.controller('mainController',function($scope,$http) {
 
     $scope.checkAll=function(){
         var correct=0,incorrect=0;
+        $scope.clearData=0;
         $scope.incorrectAnswers=[],$scope.remainingQuestion=null;
 
         for(var i=0;i<$scope.data.length;i++){
@@ -46,6 +48,8 @@ app.controller('mainController',function($scope,$http) {
         $scope.data.map(function(item,index){
                 item.answerSelected="";
         });
+        $scope.clearData=1;
+        $scope.myData=null;
     }
 })
 
